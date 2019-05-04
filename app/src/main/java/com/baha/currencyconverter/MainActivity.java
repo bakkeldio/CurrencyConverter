@@ -38,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         init();
-
         ArrayAdapter<String> arrayAdapter =
                 new ArrayAdapter<>(this,  android.R.layout.simple_spinner_item, converter.getCurrents());
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
