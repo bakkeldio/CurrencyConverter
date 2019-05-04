@@ -44,6 +44,9 @@ public class MainActivity extends AppCompatActivity {
         fromSpinner.setAdapter(arrayAdapter);
         toSpinner.setAdapter(arrayAdapter);
 
+        ImageView myImageView = (ImageView) findViewById(R.id.my_image_view);
+        myImageView.setImageResource(R.drawable.thumbnail_tw_20181218080332_7644);
+
 
         btConvert.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("DefaultLocale")
