@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         fromSpinner.setAdapter(arrayAdapter);
         toSpinner.setAdapter(arrayAdapter);
-        
+
 
         btConvert.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("DefaultLocale")
