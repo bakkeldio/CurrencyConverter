@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Converter {
 
-    private List<String> names = new ArrayList<>();
+    public List<String> names = new ArrayList<>();
     private List<Double> currents = new ArrayList<>();
 
     public Converter() {

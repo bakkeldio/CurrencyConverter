@@ -1,6 +1,7 @@
 package com.baha.currencyconverter;
 
 import android.annotation.SuppressLint;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -8,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -44,8 +46,10 @@ public class MainActivity extends AppCompatActivity {
         fromSpinner.setAdapter(arrayAdapter);
         toSpinner.setAdapter(arrayAdapter);
 
-        ImageView myImageView = (ImageView) findViewById(R.id.my_image_view);
+        ImageView myImageView =  findViewById(R.id.my_image_view);
         myImageView.setImageResource(R.drawable.thumbnail_tw_20181218080332_7644);
+        RelativeLayout rl = findViewById(R.id.relativeLayout5);
+        rl.setBackgroundColor(Color.BLUE);
 
 
         btConvert.setOnClickListener(new View.OnClickListener() {
@@ -61,8 +65,5 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void CurrencyExchangeData(){
-
-    }
 
 }
