@@ -48,8 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
         ImageView myImageView =  findViewById(R.id.my_image_view);
         myImageView.setImageResource(R.drawable.thumbnail_tw_20181218080332_7644);
-        RelativeLayout rl = findViewById(R.id.relativeLayout5);
-        rl.setBackgroundColor(Color.BLUE);
+
 
 
         btConvert.setOnClickListener(new View.OnClickListener() {

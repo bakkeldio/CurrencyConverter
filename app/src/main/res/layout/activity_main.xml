@@ -16,6 +16,12 @@
         android:orientation="horizontal"
         android:background="#7595CD">
 
+        <RelativeLayout
+
+            android:layout_width=""
+            android:layout_height="">
+
+        </RelativeLayout>
         <Spinner
             android:id="@+id/formSpinner"
             android:layout_width="0dp"
@@ -85,14 +91,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/thumbnail_tw_20181218080332_7644"
             android:id="@+id/my_image_view"/>
-        <RelativeLayout
-            android:id="@+id/relativeLayout5"
-            android:layout_width="fill_parent"
-            android:layout_height="110dp"
-            android:layout_below="@+id/relativeLayout4"
-            android:clickable="true">
 
-        </RelativeLayout>
 
     </LinearLayout>
 
