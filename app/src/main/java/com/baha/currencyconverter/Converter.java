@@ -17,11 +17,16 @@ public class Converter {
         names.add("USD");
         names.add("EU");
         names.add("KZT");
+        names.add("TRY");
+        names.add("AED");
 
         currents.add(1.0);
         currents.add(69.0);
         currents.add(78.05);
         currents.add(0.18);
+        currents.add(11.60);
+        currents.add(19.02);
+
     }
 
     public double convert(String from, String to, double amount) {
