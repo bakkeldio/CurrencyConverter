@@ -1,17 +1,16 @@
 package com.baha.currencyconverter;
 
 import android.annotation.SuppressLint;
-import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -40,9 +39,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         init();
-        ArrayAdapter<String> arrayAdapter =
-                new ArrayAdapter<>(this,  android.R.layout.simple_spinner_item, converter.getCurrents());
-        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        CurrencyAdapter arrayAdapter = new CurrencyAdapter(this);
+        arrayAdapter.updateData(converter.getCurrents());
+
         fromSpinner.setAdapter(arrayAdapter);
         toSpinner.setAdapter(arrayAdapter);
 
@@ -55,14 +55,16 @@ public class MainActivity extends AppCompatActivity {
             @SuppressLint("DefaultLocale")
             @Override
             public void onClick(View v) {
-                double result = converter.convert(fromSpinner.getSelectedItem().toString(),
-                        toSpinner.getSelectedItem().toString(), Double.valueOf(etAmount.getText().toString()));
+                if (etAmount.getText().toString().isEmpty()) {
+                    Toast.makeText(MainActivity.this, "Please type an amount", Toast.LENGTH_SHORT).show();
+                } else {
+                    double result = converter.convert(fromSpinner.getSelectedItem(),
+                            toSpinner.getSelectedItem(), Double.valueOf(etAmount.getText().toString()));
 
-                String text = "%.2f " + toSpinner.getSelectedItem().toString();
-                tvResult.setText(String.format(text, result));
+                    String text = "%.2f " + converter.getCurrents().get((int) toSpinner.getSelectedItemId()).getName();
+                    tvResult.setText(String.format(text, result));
+                }
             }
         });
     }
-
-
 }

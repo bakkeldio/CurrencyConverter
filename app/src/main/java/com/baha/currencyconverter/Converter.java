@@ -1,52 +1,37 @@
 package com.baha.currencyconverter;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Converter {
 
-    public List<String> names = new ArrayList<>();
-    private List<Double> currents = new ArrayList<>();
+    public ArrayList<Currency> currencies = new ArrayList<>();
 
     public Converter() {
         init();
     }
 
     private void init() {
-        names.add("KGS");
-        names.add("USD");
-        names.add("EU");
-        names.add("KZT");
-        names.add("TRY");
-        names.add("AED");
-
-        currents.add(1.0);
-        currents.add(69.0);
-        currents.add(78.05);
-        currents.add(0.18);
-        currents.add(11.60);
-        currents.add(19.02);
-
+        currencies.add(new Currency("KGS", 1.0, R.drawable.kgz));
+        currencies.add(new Currency("USD", 69.0, R.drawable.usa));
     }
 
-    public double convert(String from, String to, double amount) {
-        double fromA = currents.get(findFromArray(from));
-        double toA = currents.get(findFromArray(to));
+    public double convert(Object from, Object to, double amount) {
+        double fromA = currencies.get(findFromArray(from)).getPrice();
+        double toA = currencies.get(findFromArray(to)).getPrice();
 
         return fromA / toA * amount;
     }
 
-    private int findFromArray(String name) {
-        for (int i = 0; i < names.size(); i++ ) {
-            if (names.get(i).equals(name)) {
+    private int findFromArray(Object target) {
+        for (int i = 0; i < currencies.size(); i++ ) {
+            if (currencies.get(i).equals(target)) {
                 return i;
             }
         }
-
         return -1;
     }
 
-    public List<String> getCurrents() {
-        return names;
+    public ArrayList<Currency> getCurrents() {
+        return currencies;
     }
 }
