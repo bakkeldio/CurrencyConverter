@@ -24,7 +24,7 @@ public class CurrencyAdapter extends BaseAdapter implements SpinnerAdapter {
         return currencies.size();
     }
 
-    /*@Override
+    @Override
     public Object getItem(int position) {
         return currencies.get(position);
     }
@@ -49,5 +49,5 @@ public class CurrencyAdapter extends BaseAdapter implements SpinnerAdapter {
         this.currencies = currencies;
         notifyDataSetChanged();
     }
-}*/
+}
 
