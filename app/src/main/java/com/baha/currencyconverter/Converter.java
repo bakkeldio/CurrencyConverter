@@ -14,6 +14,8 @@ public class Converter {
         currencies.add(new Currency("KGS", 1.0, R.drawable.kgz));
         currencies.add(new Currency("USD", 69.0, R.drawable.usa));
         currencies.add(new Currency("TRY", 11.31, R.drawable.turkey));
+        currencies.add(new Currency("KZT", 0.18, R.drawable.kz));
+        currencies.add(new Currency("EUR", 78.36, R.drawable.ger));
     }
 
     public double convert(Object from, Object to, double amount) {
