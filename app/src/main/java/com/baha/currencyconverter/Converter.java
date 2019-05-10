@@ -12,10 +12,12 @@ public class Converter {
 
     private void init() {
         currencies.add(new Currency("KGS", 1.0, R.drawable.kgz));
-        currencies.add(new Currency("USD", 69.0, R.drawable.usa));
+        currencies.add(new Currency("USD", 69.85, R.drawable.usa));
         currencies.add(new Currency("TRY", 11.31, R.drawable.turkey));
         currencies.add(new Currency("KZT", 0.18, R.drawable.kz));
         currencies.add(new Currency("EUR", 78.36, R.drawable.ger));
+        currencies.add(new Currency("CNY", 10.25, R.drawable.china));
+        currencies.add(new Currency("AED", 19.02, R.drawable.aed));
     }
 
     public double convert(Object from, Object to, double amount) {

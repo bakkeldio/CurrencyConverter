@@ -5,11 +5,6 @@ public class Currency {
     private int image;
     private double price;
 
-    public Currency(String name, double price) {
-        this.name = name;
-        this.price = price;
-    }
-
     public Currency(String name, double price, int image) {
         this.name = name;
         this.price = price;
