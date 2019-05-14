@@ -20,6 +20,8 @@ public class Converter {
         currencies.add(new Currency("AED", 19.02, R.drawable.aed));
         currencies.add(new Currency("AZN", 40.97, R.drawable.azer));
         currencies.add(new Currency("INR", 1.0, R.drawable.india));
+        currencies.add(new Currency("RUB", 1.07, R.drawable.rus));
+        currencies.add(new Currency("BRL", 17.49, R.drawable.bra));
     }
 
     public double convert(Object from, Object to, double amount) {
