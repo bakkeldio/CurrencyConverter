@@ -2,7 +2,7 @@
 Currency converter – is a calculator that converts the value or quantity of one currency into the relative values or quantities of other currencies. For example, if I want to convert US dollars to soms.
 The objectives of this project are:
 
-1) To design an interesting app.
+1)To design an interesting app.
 
 2)To collect information on doing such projects.
 
